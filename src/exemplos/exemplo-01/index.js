@@ -4,8 +4,8 @@ import styles from "./styles";
 function Exemplo01() {
   return (
     <View style={styles.container}>
-      <Text>Exemplo 01</Text>
-      <Text>Aula PAM I, primeiro componete.</Text>
+      <Text style={styles.titulo}>Exemplo 01</Text>
+      <Text style={styles.texto}>Aula PAM I, primeiro componete.</Text>
     </View>
   );
 }
