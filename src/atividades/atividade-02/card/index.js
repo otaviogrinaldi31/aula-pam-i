@@ -2,7 +2,7 @@ import { View, Text } from "react-native";
 
 import styles from "./styles";
 
-function Mensagens({ titulo, children }) {
+function Card({ titulo, children }) {
   return (
     <View style={styles.container}>
       <Text style={styles.titulo}>{titulo}</Text>
@@ -11,4 +11,4 @@ function Mensagens({ titulo, children }) {
   );
 }
 
-export default Mensagens;
+export default Card;

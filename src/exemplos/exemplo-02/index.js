@@ -10,7 +10,15 @@ function Exemplo02() {
     <View style={styles.container}>
       <Text style={styles.titulo}>Exemplo 02</Text>
       <Image source={img} style={styles.imagem} />
-      <Mensagens />
+      <Mensagens titulo={'Sucesso'} >
+        Valor enviado corretamente!
+      </Mensagens>
+      <Mensagens titulo={'Erro'}>
+        O programa não respondeu como esperado!
+      </Mensagens>
+      <Mensagens titulo={'Alerta'}>
+        Você não pode fazer isso!
+      </Mensagens>
     </View>
   );
 }
