@@ -1,33 +1,28 @@
 import { StyleSheet } from "react-native"; 
-
 import { RFPercentage } from "react-native-responsive-fontsize";
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1, // container ocupa % da tela
-    backgroundColor: "#fafafa", // cor de fundo
-    borderRadius: 5, // bordas arredondadas
+    flex: 1, 
+    backgroundColor: "#fafafa", 
+    borderRadius: 5, 
     padding: 8,
-    alignItems: "center", // alinhamento horizontal
+    alignItems: "center", 
   },
-  titulo: {
-    fontSize: RFPercentage(4), //tamanho da fonte
-    borderWidth: 3, //expessura da borda	
-    marginTop: 20,  // margem acima do elemento
-    marginBottom: 20,  //margem acima do elemento
-    //padding: 8,   //espaçamento interno
-    width: '100%',  //altura do elemento
-    height:80, //largura do elemento   
-    textAlign: 'center',  //  alinhamento horizontal
-    textAlignVertical: 'center', // alinhamento vertical
-    color: 'black',// cor do texto
-    backgroundColor: 'darkslategrey', // cor de fundo
-    borderRadius: 20,  //   bordas arredondadas
+  titulo2: {
+    fontSize: RFPercentage(4), 
+    borderWidth: 3, 
+    marginTop: 20,  
+    marginBottom: 20,  
+    width: '100%',  
+    height: 80,   
+    textAlign: 'center',  
+    textAlignVertical: 'center', 
+    color: 'black',
+    backgroundColor: 'darkslategrey', 
+    borderRadius: 20,  
   },
-  descricao: {
-
-  },
-
+  
 });
 
 export default styles;

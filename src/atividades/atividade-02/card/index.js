@@ -1,12 +1,14 @@
-import { View, Text } from "react-native";
-
+import { View, Text, Image } from "react-native";
 import styles from "./styles";
 
-function Card({ titulo, children }) {
+function Card({ titulo2, descricao, img }) {
   return (
-    <View style={styles.container}>
-      <Text style={styles.titulo}>{titulo}</Text>
-        <Text style={styles.mensagem}>{children}</Text>
+    <View style={styles.cardContainer}>
+      <Image source={img} style={styles.imagem} />
+      <View style={styles.textContainer}>
+        <Text style={styles.titulo}>{titulo2}</Text>
+        <Text style={styles.descricao}>{descricao}</Text>
+      </View>
     </View>
   );
 }
