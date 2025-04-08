@@ -33,6 +33,25 @@ const styles = StyleSheet.create({
     margin: RFPercentage(2),
   },
 
+  valor: {
+    color:'darkslategrey',
+    fontSize: RFPercentage(4),
+  },
+
+  botao: {
+    backgroundColor: 'darkslategrey',
+    width: '75%',
+    borderRadius: RFPercentage(2),
+    padding: RFPercentage(1),
+    alignItems: 'center',
+    justifyContent: 'center',
+    margin: RFPercentage(2),
+  },
+  txtBotao: {
+    fontSize: RFPercentage(2),
+    color: '#fafafa',
+  }
+
 });
 
 export default styles;
