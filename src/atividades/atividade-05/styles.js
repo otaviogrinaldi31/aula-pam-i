@@ -51,35 +51,38 @@ const styles = StyleSheet.create({
     fontSize: RFPercentage(2.5),
     fontWeight: 'bold',
   },
-  operatorBox: {
-    borderWidth: RFPercentage(0.4),
-    borderColor: 'red',
-    padding: RFPercentage(1),
-    borderRadius: RFPercentage(2),
-    marginVertical: RFPercentage(1.5),
-    width: '30%',
+  buttonContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '75%',
+    marginTop: RFPercentage(2),
+  },
+  operationButton: {
+    backgroundColor: 'black',
+    width: '22%',
+    borderRadius: RFPercentage(3.5),
+    paddingVertical: RFPercentage(1),
     alignItems: 'center',
     justifyContent: 'center',
   },
-  operatorText: {
+  operationButtonText: {
     color: 'violet',
     fontSize: RFPercentage(2.5),
+    fontWeight: 'bold',
   },
-  operatorOptions: {
-    position: 'absolute',
-    backgroundColor: '#fff',
-    borderWidth: 1,
-    borderColor: 'red',
-    width: '30%',
-    top: RFPercentage(9),
-    paddingVertical: RFPercentage(1),
+  clearButton: {
+    backgroundColor: 'red',
+    width: '75%',
+    borderRadius: RFPercentage(3.5),
+    padding: RFPercentage(1.5),
     alignItems: 'center',
-    borderRadius: RFPercentage(2),
+    justifyContent: 'center',
+    marginTop: RFPercentage(2),
   },
-  operatorOption: {
-    paddingVertical: RFPercentage(1),
-    width: '100%',
-    alignItems: 'center',
+  clearButtonText: {
+    color: 'white',
+    fontSize: RFPercentage(2.5),
+    fontWeight: 'bold',
   },
 });
 

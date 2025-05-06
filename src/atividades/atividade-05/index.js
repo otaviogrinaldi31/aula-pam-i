@@ -7,7 +7,6 @@ function Exemplo05() {
   const [num2, setNum2] = useState('');
   const [total, setTotal] = useState('');
   const [operator, setOperator] = useState('+');  // Estado para armazenar o operador
-  const [isOperatorOpen, setIsOperatorOpen] = useState(false);  // Estado para controlar se a seleção do operador está aberta
 
   const handleCalculation = () => {
     const n1 = parseFloat(num1);
@@ -35,6 +34,13 @@ function Exemplo05() {
     setTotal(result.toString());
   };
 
+  const handleClear = () => {
+    setNum1('');
+    setNum2('');
+    setTotal('');
+    setOperator('+');  // Resetando para o operador inicial
+  };
+
   return (
     <View style={styles.container}>
       <Text style={styles.titulo}>Exemplo 5</Text>
@@ -49,29 +55,7 @@ function Exemplo05() {
         keyboardType="numeric"
       />
 
-      <TouchableOpacity
-        style={styles.operatorBox}
-        onPress={() => setIsOperatorOpen(!isOperatorOpen)} // Abre ou fecha a seleção de operador
-      >
-        <Text style={styles.operatorText}>{operator}</Text>
-      </TouchableOpacity>
-
-      {isOperatorOpen && (
-        <View style={styles.operatorOptions}>
-          {['+', '-', '*', '/'].map((op) => (
-            <TouchableOpacity
-              key={op}
-              style={styles.operatorOption}
-              onPress={() => {
-                setOperator(op);
-                setIsOperatorOpen(false); // Fecha a seleção após escolher um operador
-              }}
-            >
-              <Text style={styles.operatorText}>{op}</Text>
-            </TouchableOpacity>
-          ))}
-        </View>
-      )}
+      <Text style={styles.texto}>{operator}</Text>
 
       <Text style={styles.texto}>2º número</Text>
       <TextInput
@@ -90,8 +74,42 @@ function Exemplo05() {
         editable={false}
       />
 
+      <View style={styles.buttonContainer}>
+        <TouchableOpacity
+          style={styles.operationButton}
+          onPress={() => setOperator('+')}
+        >
+          <Text style={styles.operationButtonText}>+</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.operationButton}
+          onPress={() => setOperator('-')}
+        >
+          <Text style={styles.operationButtonText}>-</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.operationButton}
+          onPress={() => setOperator('*')}
+        >
+          <Text style={styles.operationButtonText}>*</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.operationButton}
+          onPress={() => setOperator('/')}
+        >
+          <Text style={styles.operationButtonText}>/</Text>
+        </TouchableOpacity>
+      </View>
+
       <TouchableOpacity style={styles.txtBotao} onPress={handleCalculation}>
         <Text style={styles.txtBotaoTexto}>Calcular</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.clearButton} onPress={handleClear}>
+        <Text style={styles.clearButtonText}>Limpar</Text>
       </TouchableOpacity>
     </View>
   );
